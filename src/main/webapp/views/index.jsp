@@ -66,12 +66,25 @@
 </nav>
 
 <div style="height:50px; padding:10px; border-bottom:1px solid lightgrey">
-    <button type="button" id="login_btn" onclick="location.href='/login'"><p>로그인</p></button>
-    <span class="loginbar-category" ><a href="#" style="color: #00A3FF; font-weight: bold">바로접속 ON</a></span>
-    <span class="loginbar-category"><a href="/custinfo">마이페이지</a></span>
-    <span class="loginbar-category"><a href="/cart">장바구니</a></span>
-    <span class="loginbar-category"><a href="#">고객센터</a></span>
-    <span class="loginbar-category"><a href="/register" style="color: #048EFF">회원 가입 EVENT. 신규 가입 후 바로 사용 가능한 15% 할인 쿠폰 / 모신사 스탠다드 990원 구매 기회</a></span>
+    <c:choose>
+        <c:when test="${logincust ==null}">
+            <button type="button" id="login_btn" onclick="location.href='/login'"><p>로그인</p></button>
+            <span class="loginbar-category" ><a href="#" style="color: #00A3FF; font-weight: bold">바로접속 ON</a></span>
+        </c:when>
+   <c:otherwise>
+            <button type="button" id="login_btn" onclick="location.href='/logout'"><p>로그아웃</p></button>
+       <span class="loginbar-category" ><a href="#" style="color: #00A3FF; font-weight: bold">바로접속 ON</a></span>
+       <span class="loginbar-category"><a href="/custinfo?id=${logincust.id}">마이페이지</a></span>
+       <span class="loginbar-category"><a href="/cart">장바구니</a></span>
+       <span class="loginbar-category">${logincust.name}(${logincust.id})님 즐거운 쇼핑되세요!</span>
+
+   </c:otherwise>
+    </c:choose>
+
+    <c:if test="${logincust == null}">
+        <span class="loginbar-category"><a href="#">고객센터</a></span>
+        <span class="loginbar-category"><a href="/register" style="color: #048EFF">회원 가입 EVENT. 신규 가입 후 바로 사용 가능한 15% 할인 쿠폰 / 모신사 스탠다드 990원 구매 기회</a></span>
+    </c:if>
 </div>
 <div class="container-fluid text-center">
     <div class="row content">

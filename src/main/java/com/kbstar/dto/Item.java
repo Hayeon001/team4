@@ -11,6 +11,7 @@ import java.util.Date;
 @ToString
 public class Item {
     private int id;
+    private int cate_id;
     private String name;
     private int price;
     private String imgname;

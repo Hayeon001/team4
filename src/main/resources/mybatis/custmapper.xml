@@ -19,13 +19,15 @@
 
     <insert id="insert" parameterType="cust">
         INSERT INTO cust
-        VALUES (#{id}, #{pwd}, #{name})
+        VALUES (#{id}, #{pwd}, #{name}, #{age}, #{gender})
     </insert>
 
     <update id="update" parameterType="cust">
         UPDATE cust
         SET name=#{name},
-            pwd=#{pwd}
+            pwd=#{pwd},
+            age=#{age},
+            gender=#{gender}
         WHERE id = #{id}
     </update>
 

@@ -10,15 +10,6 @@
     <select id="selectall" resultType="item">
         SELECT * FROM item
     </select>
-    <insert id="insert" parameterType="item">
-        INSERT INTO item VALUES (item_seq.NEXTVAL,#{name},#{price},#{imgname},SYSDATE)
-    </insert>
-    <update id="update" parameterType="item">
-        UPDATE item SET name=#{name},price=#{price},imgname=#{imgname} WHERE id=#{id}
-    </update>
-    <delete id="delete" parameterType="Integer">
-        DELETE FROM item WHERE id=#{id}
-    </delete>
 
     <select id="getpage" resultType="item">
         SELECT * FROM item ORDER BY id DESC  -- 최신순

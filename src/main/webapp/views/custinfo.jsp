@@ -39,88 +39,78 @@
         custinfo_form.init();
     });
 </script>
-
-<div class="col-sm-8 text-left">
+<div class="col-sm-8">
     <div class="container">
         <h1>마이페이지</h1><br/>
 
         <form id="custinfo_form" class="form-horizontal text-left well">
             <div class="form-group">
-                <label for="id">ID</label><br/>
+                <label class="control-label col-sm-2" for="id">아이디:</label>
                 <div class="col-sm-8">
-                    <input type="text" id="id" name="id" value="${custinfo.id}" readonly>
-                </div>
-                <div class="col-sm-10">
-                    <span id="check_id" class="bg-danger"></span>
+                    <input type="text" name="id" class="form-control" id="id" value="${custinfo.id}" readonly >
+                    <div class="col-sm-10">
+                        <span id="check_id" class="bg-danger"></span>
+                    </div>
                 </div>
 
             </div>
             <div class="form-group">
-                <label for="pwd">Password</label><br/>
+                <label class="control-label col-sm-2" for="pwd">비밀번호:</label>
                 <div class="col-sm-8">
-                    <input type="password" id="pwd" name="pwd">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="name">Name</label><br/>
-                <div class="col-sm-8">
-                    <input type="text" id="name" name="name" value="${custinfo.name}">
+                    <input type="password" name="pwd" class="form-control" id="pwd" value="${custinfo.pwd}">
                 </div>
             </div>
 
             <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">이름:</label>
                 <div class="col-sm-8">
-                    <button id="custinfo_btn" type="button" class="btn btn-default">수정하기</button>
+                    <input type="text" name="name" class="form-control" id="name" value="${custinfo.name}" >
                 </div>
             </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="age">나이:</label>
+                <div class="col-sm-8">
+                    <input type="text" name="age" class="form-control" id="age" value="${custinfo.age}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="gender">성별:</label>
+                <div class="col-sm-8">
+                    <input type="text" name="gender" class="form-control" id="gender" value="${custinfo.gender}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button id="custinfo_btn" class="btn btn-default">정보수정 하기</button>
+                </div>
+            </div>
+
         </form>
+
     </div>
 </div>
 
 <style>
-    input[type=text], select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-
-    input[type=password], select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-
-    input[type=submit] {
-        width: 100%;
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    input[type=submit]:hover {
-        background-color: #45a049;
-    }
-
-    /*div {*/
-    /*    border-radius: 5px;*/
-    /*    background-color: #f2f2f2;*/
-    /*    padding: 20px;*/
-    /*}*/
-
-
     .container {
-        width: 60%
+        width: 100%
     }
+    #custinfo_btn {
+        float: right;
+    }
+    #custinfo_btn {
+        width: 150px;
+        height: 30px;
+        border-radius: 0;
+        font-size: 12px;
+        background-color: white;
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+    #custinfo_btn:hover {
+        color: white;
+        background-color: #222222;
+    }
+
 </style>

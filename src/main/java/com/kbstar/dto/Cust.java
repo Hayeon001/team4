@@ -11,5 +11,7 @@ public class Cust {
     private String id;
     private String pwd;
     private String name;
+    private int age;
+    private String gender;
 
 }

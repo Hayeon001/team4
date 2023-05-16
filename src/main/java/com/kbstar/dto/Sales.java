@@ -2,6 +2,8 @@ package com.kbstar.dto;
 
 import lombok.*;
 
+import java.util.Date;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -9,7 +11,9 @@ import lombok.*;
 @Getter
 @ToString
 public class Sales {
-    private String rdate; // 2023-05-15
-    private int price;
-    private String gender;
+    private int item_id;
+    private String cust_id;
+    private int id;
+    private Date rdate; // 2023-05-15
+
 }

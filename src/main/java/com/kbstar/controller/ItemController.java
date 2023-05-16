@@ -41,10 +41,9 @@ public class ItemController {
         model.addAttribute("center",dir+"add");
         return "index";
     }
-    @RequestMapping("/all")
-    public String all(Model model) throws Exception {
+    @RequestMapping("/top")
+    public String top(Model model) throws Exception {
         List<Item> list = null;
-        //list = itemService.get();
         try {
             list = itemService.get();
         } catch (Exception e) {
@@ -52,7 +51,7 @@ public class ItemController {
         }
         model.addAttribute("allitem",list);
         model.addAttribute("left",dir+"left");
-        model.addAttribute("center",dir+"all");
+        model.addAttribute("center",dir+"top");
         return "index";
     }
 

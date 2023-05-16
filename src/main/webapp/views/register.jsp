@@ -97,6 +97,19 @@
             </div>
 
             <div class="form-group">
+                <label class="control-label col-sm-2" for="age">나이:</label>
+                <div class="col-sm-8">
+                    <input type="text" name="age" class="form-control" id="age" placeholder="나이를 입력하세요">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="gender">성별:</label>
+                <div class="col-sm-8">
+                    <input type="text" name="gender" class="form-control" id="gender" placeholder="성별을 입력하세요">
+                </div>
+            </div>
+
+            <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <button id="register_button" class="btn btn-default">회원가입 하기</button>
                 </div>
