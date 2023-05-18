@@ -151,11 +151,22 @@
                 <jsp:include page="${center}.jsp"/>
             </c:otherwise>
         </c:choose> <%--center end--%>
+
+        <!--footer-->
+        <footer class="container-fluid text-center">
+            <c:choose>
+                <c:when test="${footer == null}">
+                    <jsp:include page="footer.jsp"/>
+                </c:when>
+                <c:otherwise>
+                    <jsp:include page="${footer}.jsp"/>
+                </c:otherwise>
+            </c:choose>
+        </footer>
+
     </div> <%--row content end--%>
 </div><%--container end--%>
-<footer class="container-fluid text-center">
-    <p>Footer Text</p>
-</footer>
+
 </body>
 </html>
 <script>
