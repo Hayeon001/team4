@@ -55,13 +55,13 @@
         <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" class="link_icon">
         <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" class="link_icon">
         <img src="https://cdn-icons-png.flaticon.com/512/8142/8142645.png" class="link_icon">
-        <p style="font-size: 20px; padding: 10px 0">COPYRIGHT (C) MUSINSA ALL RIGHTS RESERVED.</p>
+        <p style="font-size: 20px; padding: 10px 0">COPYRIGHT (C) MOSINSA ALL RIGHTS RESERVED.</p>
         <p style="color:gray">
-            무신사닷컴 내 매거진, 스트리트스냅, 스토어 등 무신사 자체 생성 콘텐츠는 무신사닷컴 및 무신사 계약업체에 저작권이 있습니다.<br/>
-            이러한 콘텐츠는 출처를 밝히고(무신사닷컴 표기 및 www.musinsa.com 링크 포함 필수) 비상업적인 용도에서만 활용하실 수 있습니다.
+            모신사닷컴 내 매거진, 스트리트스냅, 스토어 등 모신사 자체 생성 콘텐츠는 모신사닷컴 및 모신사 계약업체에 저작권이 있습니다.<br/>
+            이러한 콘텐츠는 출처를 밝히고(모신사닷컴 표기 및 www.mosinsa.com 링크 포함 필수) 비상업적인 용도에서만 활용하실 수 있습니다.
             <a href="#" style="font-weight: bold;text-decoration: none">자세히보기</a>
             <br/><br/>
-            커뮤니티 및 중고장터, 댓글 등 무신사 회원이 올린 이미지가 저작권에 위배될 경우
+            커뮤니티 및 중고장터, 댓글 등 모신사 회원이 올린 이미지가 저작권에 위배될 경우
             <a href="#" style="font-weight: bold;text-decoration: none">신고</a> 하시면 검토 후 삭제하겠습니다.
         </p>
     </div>
@@ -71,14 +71,14 @@
     <div style="text-align: left; font-size: 13px">
         <p style="font-size: 25px;padding: 10px 0">100% AUTHENTIC</p>
         <p style="font-weight: bold">
-            무신사스토어에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100% 정품임을 보증합니다.
+            모신사스토어에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100% 정품임을 보증합니다.
         </p>
         <br/>
         <p style="color:gray">
             주식회사 모신사 (MOSINSA Co., Ltd.) | 서울특별시 성동구 아차산로 13길 11, 1층 (성수동2가, 알파코캠퍼스) | 사업자등록번호 : 211-88-11111 |<br/>
             통신판매업신고 : 2023-서울성동-01234 | 대표 : 유성진 |
             <br/><br/>
-            일부 상품의 경우 주식회사 무신사는 통신판매의 당사자가 아닌 통신판매중개자로서<br/>
+            일부 상품의 경우 주식회사 모신사는 통신판매의 당사자가 아닌 통신판매중개자로서<br/>
             상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다.
             <br/><br/>
             당사는 고객님의 안전거래를 위해 관련 법률에 의거하여 NHN KCP의 에스크로서비스를 적용하고 있습니다.
