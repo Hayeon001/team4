@@ -11,20 +11,20 @@ import java.util.List;
 
 @Slf4j
 @SpringBootTest
-class DeleteTests {
+class SelectCateIdTests {
     @Autowired
     ItemService service;
 
     @Test
     void contextLoads() {
-        List<Item> list = null;
+        List<Item> item = null;
 
         try {
-            service.remove(200);
-            log.info("삭제완료");
+            item = service.getTopcate(100);
+
         } catch (Exception e) {
 
-            log.info("......에러다.........");
+            log.info("......에러.........");
             e.printStackTrace();
         }
 

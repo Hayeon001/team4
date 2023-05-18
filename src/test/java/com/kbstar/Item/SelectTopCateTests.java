@@ -11,22 +11,20 @@ import java.util.List;
 
 @Slf4j
 @SpringBootTest
-class SelectTests {
+class SelectTopCateTests {
     @Autowired
     ItemService service;
 
     @Test
     void contextLoads() {
-        List<Item> list = null;
+        List<Item> item = null;
 
         try {
-            list = service.get();
+            item = service.getTopcate(100);
 
-//			for(Item obj:list){
-//				log.info(obj.toString());
         } catch (Exception e) {
 
-            log.info("......에러다.........");
+            log.info("......에러.........");
             e.printStackTrace();
         }
 

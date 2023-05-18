@@ -22,7 +22,7 @@ class SelectPageTests {
         try {
             pageInfo = new PageInfo<>(service.getPage(2), 5);
         } catch (Exception e) {
-            log.info("......에러다.........");
+            log.info("......에러.........");
             e.printStackTrace();
         }
 

@@ -7,22 +7,23 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 @Slf4j
 @SpringBootTest
-class SelectOneTests {
+class SelectAllTests {
     @Autowired
     ItemService service;
 
     @Test
     void contextLoads() {
-        Item item = null;
+        List<Item> list = null;
 
         try {
-            item = service.get(100);
-
+            list = service.get();
         } catch (Exception e) {
 
-            log.info("......에러다.........");
+            log.info("......에러.........");
             e.printStackTrace();
         }
 
