@@ -35,12 +35,24 @@
                 })
             });
         },
+        validateAge: function () {
+            $('#age').keyup(function () {
+                var age = $('#age').val();
+                if (!/^\d+$/.test(age)) {
+                    age = age.replace(/\D/g, ""); // 숫자 이외의 문자를 제거합니다.
+                    $('#check_age').text("나이는 숫자만 입력가능합니다.");
+                }
+                $('#age').val(age);
+
+            });
+        },
         send: function () {
             var id = $('#id').val();
             var pwd = $('#pwd').val();
             var name = $('#name').val();
+
             if (id.length <= 3) {
-                $('#check_id').text('4자리 이상이어야 합니다')
+                $('#check_id').text('ID는 4자리 이상이어야 합니다')
                 $('#id').focus();
                 return;
             }
@@ -64,6 +76,8 @@
 
     $(function () {
         register_form.init();
+        register_form.send();
+        register_form.validateAge();
     });
 </script>
 
@@ -100,18 +114,29 @@
                 <label class="control-label col-sm-2" for="age">나이:</label>
                 <div class="col-sm-8">
                     <input type="text" name="age" class="form-control" id="age" placeholder="나이를 입력하세요">
+                    <div class="col-sm-10">
+                        <span id="check_age"></span>
+                    </div>
                 </div>
             </div>
+
             <div class="form-group">
                 <label class="control-label col-sm-2" for="gender">성별:</label>
                 <div class="col-sm-8">
-                    <input type="text" name="gender" class="form-control" id="gender" placeholder="성별을 입력하세요">
+                    <div class="form-control" id="gender">
+                        <label class="radio-inline">
+                            <input type="radio" name="gender" value="F">F(Female)
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender" value="M">M(Male)
+                        </label>
+                    </div>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button id="register_button" class="btn btn-default">회원가입 하기</button>
+                    <button id="register_button" >회원가입 하기</button>
                 </div>
             </div>
 
@@ -124,10 +149,10 @@
     .container {
         width: 100%
     }
-    #register_btn {
+    #register_button {
         float: right;
     }
-    #register_btn {
+    #register_button {
         width: 150px;
         height: 30px;
         border-radius: 0;
@@ -136,7 +161,7 @@
         vertical-align: middle;
         margin-right: 20px;
     }
-    #register_btn:hover {
+    #register_button:hover {
         color: white;
         background-color: #222222;
     }

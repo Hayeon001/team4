@@ -17,6 +17,11 @@ public class Cart {
     private int cnt;
     private Date rdate;
 
+
+    public Cart(int id, int cnt) {
+        this.id = id;
+        this.cnt = cnt;
+    }
     public Cart(String cust_id, int item_id, int cnt) {
         this.cust_id = cust_id;
         this.item_id = item_id;

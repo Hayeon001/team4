@@ -8,35 +8,38 @@
             });
 
         },
+        validateAge: function () {
+            $('#age').keyup(function () {
+                var age = $('#age').val();
+                if (!/^\d+$/.test(age)) {
+                    age = age.replace(/\D/g, ""); // 숫자 이외의 문자를 제거합니다.
+                    $('#check_age').text("나이는 숫자만 입력가능합니다.");
+                }
+                $('#age').val(age);
+            });
+        },
+        gender: function() {
+            let gender = $('#gender').data('gender');
+            if (gender === 'M') {
+                $('#male').prop('checked', true);
+            } else if (gender === 'F') {
+                $('#female').prop('checked', true);
+            }
+        },
         send: function () {
-            var id = $('#id').val();
-            var pwd = $('#pwd').val();
-            var name = $('#name').val();
-            if (id.length <= 3) {
-                $('#check_id').text('4자리 이상이어야 합니다')
-                $('#id').focus();
-                return;
-            }
-
-            if (pwd == '') {
-                $('#pwd').focus();
-                return;
-            }
-            if (name == '') {
-                $('#name').focus();
-                return;
-            }
-
             $('#custinfo_form').attr({
                 'action': '/custinfoimpl',
                 'method': 'post'
             });
             $('#custinfo_form').submit();
+            alert("고객님의 정보수정이 완료되었습니다.")
         }
     };
 
     $(function () {
         custinfo_form.init();
+        custinfo_form.validateAge();
+        custinfo_form.gender();
     });
 </script>
 <div class="col-sm-8">
@@ -72,12 +75,23 @@
                 <label class="control-label col-sm-2" for="age">나이:</label>
                 <div class="col-sm-8">
                     <input type="text" name="age" class="form-control" id="age" value="${custinfo.age}">
+                    <div class="col-sm-10">
+                        <span id="check_age"></span>
+                    </div>
                 </div>
             </div>
+
             <div class="form-group">
                 <label class="control-label col-sm-2" for="gender">성별:</label>
                 <div class="col-sm-8">
-                    <input type="text" name="gender" class="form-control" id="gender" value="${custinfo.gender}">
+                    <div class="form-control" id="gender" data-gender="${custinfo.gender}">
+                        <label class="radio-inline">
+                            <input type="radio" name="gender" id="female" value="F">F(Female)
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender" id="male" value="M">M(Male)
+                        </label>
+                    </div>
                 </div>
             </div>
 

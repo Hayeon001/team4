@@ -5,5 +5,6 @@
     <div class="container">
         <h3>Login OK</h3>
         <h3>${logincust.name}님 환영 합니다.</h3>
+        <a href="/">>>쇼핑하러 가기</a>
     </div>
 </div>

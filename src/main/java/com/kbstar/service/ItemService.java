@@ -47,8 +47,15 @@ public class ItemService implements KBService<Integer, Item> {
         return mapper.selectall();
     }
 
+
     public Page<Item> getPage(int pageNo) throws Exception {
-        PageHelper.startPage(pageNo, 3); // 3: 한화면에 출력되는 개수
+        PageHelper.startPage(pageNo, 8); // 3: 한화면에 출력되는 개수
         return mapper.getpage();
+    }
+    public List<Item> getTopcate(Integer topcate) throws Exception {
+        return mapper.gettopcate(topcate);
+    }
+    public List<Item> getCateid(Integer cateid) throws Exception {
+        return mapper.getcateid(cateid);
     }
 }

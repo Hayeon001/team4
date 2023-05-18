@@ -56,8 +56,9 @@
 
 
     <update id="update" parameterType="cart">
-        UPDATE cart SET cust_id=#{cust_id},item_id=#{item_id},cnt=#{cnt} WHERE id=#{id}
+        UPDATE cart SET cnt=#{cnt} WHERE item_id=#{item_id} and cust_id=#{cust_id}
     </update>
+
     <delete id="delete" parameterType="Integer">
         DELETE FROM cart WHERE id=#{id}
     </delete>

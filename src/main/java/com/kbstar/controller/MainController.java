@@ -1,7 +1,10 @@
 package com.kbstar.controller;
 
+import com.github.pagehelper.PageInfo;
+import com.kbstar.dto.Cart;
 import com.kbstar.dto.Cust;
 import com.kbstar.dto.Item;
+import com.kbstar.service.CartService;
 import com.kbstar.service.CustService;
 import com.kbstar.service.ItemService;
 import lombok.extern.slf4j.Slf4j;
@@ -14,6 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -27,15 +31,24 @@ public class MainController {
     @Autowired
     ItemService itemService;
     @Autowired
+    CartService cartService;
+    @Autowired
     private BCryptPasswordEncoder encoder;
 
 
     @RequestMapping("/")
-    public String main(Model model) throws Exception {
-        List<Item> list = null;
-        list = itemService.get();
-        log.info(list.toString());
-        model.addAttribute("allitem",list);
+    public String main(@RequestParam(required = false, defaultValue = "1") int pageNo, Model model) throws Exception {
+        PageInfo<Item> p;
+        //list = itemService.get();
+        try {
+            p = new PageInfo<>(itemService.getPage(pageNo), 5);
+            // 5:하단 네비게이션 페이지개수
+        } catch (Exception e) {
+            throw new Exception("시스템장애: ER0002");
+        }
+        model.addAttribute("target","");
+        model.addAttribute("cpage",p);
+        model.addAttribute("left","left");
         return "index";
     }
 
@@ -44,7 +57,6 @@ public class MainController {
         model.addAttribute("center","login");
         return "index";
     }
-
     @RequestMapping("/logout")
     public String logout(Model model, HttpSession session){
         if(session != null){
@@ -118,12 +130,58 @@ public class MainController {
         }
         return "redirect:/custinfo?id=" + cust.getId();
     }
-
     @RequestMapping("/cart")
-    public String cart(Model model){
-        model.addAttribute("center","cart");
+    public String cart(Model model, String cid) throws Exception {
+        List<Cart> list = null;
+        try {
+            list = cartService.getMyCart(cid);
+        } catch (Exception e) {
+            throw new Exception("시스템장애:ERORR002");
+        }
+
+        model.addAttribute("allcart", list);
+        model.addAttribute("center", "cart");
         return "index";
     }
 
+    @RequestMapping("/addcart")
+    public String addcart(Model model, Cart cart, HttpSession session) throws Exception {
+        cartService.register(cart);
+        if (session != null) {
+            Cust cust = (Cust) session.getAttribute("logincust");
+            return "redirect:/cart?cid="+cart.getCust_id();
+        }
+        return "index";
 
+    }
+
+    @RequestMapping("/delcart")
+    public String delcart(Model model, Integer id, HttpSession session) throws Exception {
+        log.info("=========================================="+ id);
+        cartService.remove(id);
+        if (session != null) {
+            Cust cust = (Cust) session.getAttribute("logincust");
+            return "redirect:/cart?cid=" + cust.getId();
+        }
+        return "redirect:/";
+    }
+
+    @RequestMapping("/updatecart")
+    public String updatecart(Model model, Cart cart,Integer cnt, HttpSession session) throws Exception {
+        log.info("=========================================="+ cart);
+        cart.setCnt(cnt);
+        cartService.modify(cart);
+        if (session != null) {
+            Cust cust = (Cust) session.getAttribute("logincust");
+            return "redirect:/cart?cid=" + cust.getId();
+        }
+        return "redirect:/";
+    }
+
+
+    @RequestMapping("/ws")
+    public String ws(Model model, HttpSession session) {
+        model.addAttribute("center", "ws");
+        return "index";
+    };
 }
