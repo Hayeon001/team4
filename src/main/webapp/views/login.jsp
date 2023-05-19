@@ -59,7 +59,7 @@
                             <span id="register_info" style="display: flex; align-items: flex-end;">모신사 방문이 처음이시라면?>></span>
                         </div>
                         <div class="col-sm-3">
-                            <button id="register_button" class="btn btn-default" onclick="location.href='/register'">회원가입 하기</button>
+                            <button id="register_button" class="btn btn-default"><a href="/register">회원가입하기</a></button>
                         </div>
                     </div>
                 </div>
