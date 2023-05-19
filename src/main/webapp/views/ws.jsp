@@ -30,6 +30,7 @@
                 "<h4>" + "${logincust.id}" +":"+
                 $("#totext").val()
                 + "</h4>");
+        $("#totext").val('');
       });
     },
     connect:function(){
