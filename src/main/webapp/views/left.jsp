@@ -75,7 +75,7 @@
     <br/><br/>
     <p style="border-bottom: 1px solid lightgrey; padding: 15px"/>
     <div style="margin:15px;height: 150px;text-align: left">
-        <h3 class="glyphicon glyphicon-earphone">1544-0000</h3>
+        <h3 class="glyphicon glyphicon-earphone">1544-7198</h3>
         <p style="font-size: 11px;color:darkgrey;">오전10시~오후5시 운영 / 금,토,일,휴일 휴무</p>
         <div style="border-top: 1px solid lightgrey; font-size: 12px;padding-top: 15px">
             <p>- 전화 전 <a href="#">자주 묻는 질문</a>을 확인하세요.</p>

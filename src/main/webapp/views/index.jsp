@@ -274,7 +274,7 @@
                 location.href='#';
             });
             const scrollBtn = document.createElement("button");
-            scrollBtn.innerHTML = "Ãªº¿";
+            scrollBtn.innerHTML = "Q&A";
             scrollBtn.setAttribute("id", "scroll-btn");
             document.body.appendChild(scrollBtn);
             scrollBtn.classList.add("show");
