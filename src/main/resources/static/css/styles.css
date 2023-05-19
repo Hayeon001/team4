@@ -136,10 +136,10 @@ a.main-logo:hover {
   font-weight: bold;
 }
 
-.row.content {height: 1000px}
+.row.content {height: auto}
 footer {
-  background-color: #555;
-  color: white;
+  /*background-color: #555;*/
+  /*color: white;*/
   padding: 15px;
 }
 /* On small screens, set height to 'auto' for sidenav and grid */
