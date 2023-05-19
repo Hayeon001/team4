@@ -149,7 +149,7 @@
 
 </head>
 <body>
-<div class="topaddlink"><img src="https://image.musinsa.com/images/banner/2023051810461200000034288.jpg"></div>
+<div class="topaddlink"><img src="https://image.musinsa.com/images/banner/2023051810461200000034288.jpg" style="width:100%"></div>
 <%--navbar--%>
 <nav class="main-navbar navbar-inverse">
     <div class="container-fluid">
