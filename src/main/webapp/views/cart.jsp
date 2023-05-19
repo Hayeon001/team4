@@ -4,14 +4,14 @@
 <script>
     let cartupdate_form = {
         init: function () {
-                $('.cartupdate_btn').click(function () {
+            $('.cartupdate_btn').click(function () {
 
 
-                    let cust_id = $(this).data('custid');
-                    let item_id = $(this).data('itemid');
-                    let cnt = $(this).prev().val();
-                    //let cust_id = "${logincust.id}";
-                    //let item_id = $(this).parent().prev().prev().prev().text();
+                let cust_id = $(this).data('custid');
+                let item_id = $(this).data('itemid');
+                let cnt = $(this).prev().val();
+                //let cust_id = "${logincust.id}";
+                //let item_id = $(this).parent().prev().prev().prev().text();
 
                 $.ajax({
                     url: '/updatecart',
@@ -26,10 +26,39 @@
                     }
                 })
             });
-    }}
-        $(function () {
-            cartupdate_form.init();
-        });
+        }}
+
+    <%--let order = {--%>
+    <%--    init: function () {--%>
+    <%--        $('#order').click(function () {--%>
+    <%--            let cust_id = "${logincust.id}";--%>
+    <%--            let item_id = $(this).data('itemid');--%>
+    <%--            let cnt = null;--%>
+    <%--            $.ajax({--%>
+    <%--                url: '/order',--%>
+    <%--                type: 'post',--%>
+    <%--                data: {cust_id: cust_id, item_id: item_id, cnt: 1},--%>
+    <%--                success: function () {--%>
+    <%--                    if(cust_id != '') {--%>
+    <%--                        location.href="/cart?cid="+cust_id;--%>
+    <%--                    } else {--%>
+    <%--                        location.href="/login"--%>
+    <%--                    }--%>
+    <%--                },--%>
+    <%--                error:()=>{--%>
+    <%--                    alert("ajax에러")--%>
+    <%--                }--%>
+    <%--            });--%>
+    <%--        });--%>
+    <%--    }--%>
+    <%--};--%>
+    <%--$(function () {--%>
+    <%--    item_get.init();--%>
+    <%--});--%>
+
+    $(function () {
+        cartupdate_form.init();
+    });
 
 </script>
 <div class="col-sm-8 text-left">
@@ -49,6 +78,7 @@
                         <th>TOTAL</th>
                         <th>REGDATE</th>
                         <th>DELETE</th>
+                        <th>ORDER</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -66,12 +96,18 @@
                             <td><fmt:formatDate value="${obj.rdate}" pattern="dd-MM-yyyy"/></td>
                             <td><a href="/delcart?id=${obj.id}" class="btn btn-danger" role="button">삭제</a>
                             </td>
+                            <td> <a href="/order?id=${obj.id}&cust_id=${logincust.id}&item_id=${obj.item_id}" class="btn btn-success" role="button">주문</a>
+                            </td>
                         </tr>
                         <c:set var="total" value="${total +(obj.cnt * obj.item_price)}"/>
                     </c:forEach>
                     </tbody>
                 </table>
-                <h4><fmt:formatNumber value="${total}" pattern="###,###원"/></h4>
+                <div style="text-align: right;">
+                    <h4 id="totalcost">총 결제금액 : <fmt:formatNumber value="${total}" pattern="###,###원"/></h4>
+                    <button id="order" class="btn-primary"
+                            onclick="location.href='/orderpage'">주문하기</button>
+                </div>
             </div>
         </div>
     </div>
@@ -80,5 +116,11 @@
     .medium_img {
         width: 80px;
         height: 80px;
+    }
+    #totalcost{
+
+    }
+    #order{
+        font-size: 1.5em;
     }
 </style>

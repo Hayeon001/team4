@@ -8,9 +8,9 @@
     <select id="selectall" resultType="sales">
         SELECT * FROM sales
     </select>
-    <insert id="insert" parameterType="sales">
-        INSERT INTO sales VALUES (TO_DATE(#{rdate},'YYYY-MM-DD'), #{price}, #{gender})
-    </insert>
 
+    <insert id="insert" parameterType="sales">
+        INSERT INTO sales VALUES (sales_seq.NEXTVAL, #{cust_id}, #{item_id}, SYSDATE)
+    </insert>
 
 </mapper>

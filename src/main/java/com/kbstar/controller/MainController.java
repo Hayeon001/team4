@@ -177,7 +177,12 @@ public class MainController {
         }
         return "redirect:/";
     }
+    @RequestMapping("/orderpage")
+    public String orderpage(Model model){
+        model.addAttribute("center","orderpage");
 
+        return "index";
+    }
 
     @RequestMapping("/ws")
     public String ws(Model model, HttpSession session) {

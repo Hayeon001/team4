@@ -52,6 +52,18 @@
                     <button id="login_button" class="btn btn-default">로그인 하기</button>
                 </div>
             </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <span id="register_info" style="display: flex; align-items: flex-end;">모신사 방문이 처음이시라면?>></span>
+                        </div>
+                        <div class="col-sm-3">
+                            <button id="register_button" class="btn btn-default" onclick="location.href='/register'">회원가입 하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
 </div>
@@ -59,6 +71,11 @@
 <style>
     .container {
         width: 100%
+    }
+    #register_info{
+        float: right;
+        color: #0b5ed7;
+        font-size: 1.5em;
     }
     #login_button {
         float: right;
@@ -76,5 +93,20 @@
         color: white;
         background-color: #222222;
     }
-
+    #register_button {
+        float: right;
+    }
+    #register_button {
+        width: 150px;
+        height: 30px;
+        border-radius: 0;
+        font-size: 12px;
+        background-color: white;
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+    #register_button:hover {
+        color: white;
+        background-color: #222222;
+    }
 </style>
