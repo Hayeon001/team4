@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="EUC-KR" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+
 <script>
     let register_form = {
         init: function () {
@@ -85,13 +86,13 @@
     <div class="container">
         <h1>회원가입</h1><br/>
 
-        <form id="register_form" class="form-horizontal text-left well">
+        <form id="register_form" class="form-horizontal text-left well" style="font-size: 18px">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="id">아이디:</label>
                 <div class="col-sm-8">
                     <input type="text" name="id" class="form-control" id="id" placeholder="아이디를 입력하세요.">
                     <div class="col-sm-10">
-                        <span id="check_id" class="bg-danger"></span>
+                        <span id="check_id" class="bg-danger" style="font-size: 15px; color:lavenderblush;padding: 0px 5px"></span>
                     </div>
                 </div>
 
