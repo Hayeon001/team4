@@ -27,6 +27,12 @@
             }
         },
         send: function () {
+            var pwd = $('#pwd').val();
+            if(pwd == ''){
+                $('#pwd').focus();
+                alert("비밀번호 입력은 필수입니다.")
+                return; //공백일 땐 서버로 전송안된다
+            }
             $('#custinfo_form').attr({
                 'action': '/custinfoimpl',
                 'method': 'post'
@@ -60,7 +66,8 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="pwd">비밀번호:</label>
                 <div class="col-sm-8">
-                    <input type="password" name="pwd" class="form-control" id="pwd" value="${custinfo.pwd}">
+<%--                    <input type="password" name="pwd" class="form-control" id="pwd" value="${custinfo.pwd}">--%>
+                    <input type="password" name="pwd" class="form-control" id="pwd">
                 </div>
             </div>
 
