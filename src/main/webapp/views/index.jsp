@@ -279,7 +279,7 @@
             document.body.appendChild(scrollBtn);
             scrollBtn.classList.add("show");
             scrollBtn.addEventListener("click", function(){
-                location.href='/login';
+                location.href='/qna';
             });
             const scrollBtn2 = document.createElement("button");
             scrollBtn2.innerHTML = "1:1 »ó´ã";
