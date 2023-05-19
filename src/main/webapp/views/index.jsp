@@ -75,10 +75,14 @@
         color: white;
         background-color: #222222;
     }
+    .topaddlink {
+        width: 100%;
+    }
 </style>
 
 </head>
 <body>
+<div class="topaddlink"><img src="https://image.musinsa.com/images/banner/2023051810461200000034288.jpg"></div>
 <%--navbar--%>
 <nav class="main-navbar navbar-inverse">
     <div class="container-fluid">
