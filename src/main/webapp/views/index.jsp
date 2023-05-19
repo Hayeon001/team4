@@ -101,6 +101,12 @@
         </form>
 
         <ul class="nav main-navbar-nav navbar-right" style="padding-right: 20px">
+            <li><a href="https://www.musinsa.com/app/campaign/index/togethersale23" class="main-navbar-category" style="color: deepskyblue;background-color: transparent">동행세일</a></li>
+            <li><a href="https://www.musinsa.com/app/plan/views/35646" class="main-navbar-category" style="color: #00D47B;background-color: transparent">PLUS배송</a></li>
+            <li><a href="#" class="main-navbar-category" style="color: #FFFFFF;background-color: transparent">랭킹</a></li>
+            <li><a href="#" class="main-navbar-category" style="color: #FFFFFF;background-color: transparent">업데이트</a></li>
+            <li><a href="#" class="main-navbar-category" style="color: #FFFFFF;background-color: transparent">코디</a></li>
+            <li><a href="#" class="main-navbar-category" style="color: #FFFFFF;background-color: transparent">세일</a></li>
             <li><a href="/item/top" class="main-navbar-category" style="color: #00D47B;background-color: transparent">상의</a></li>
             <li><a href="/item/bottom" class="main-navbar-category" style="color: #ED00EC;background-color: transparent">하의</a></li>
             <li><a href="/item/shoes" class="main-navbar-category" style="color: #FFFFFF;background-color: transparent">신발</a></li>

@@ -44,6 +44,26 @@
         <a href="/item/shoes" class="left-category-ko">신발</a>
         <span class="left-category-en">Shoes</span>
     </div>
+    <div class="left-category">
+        <a href="#" class="left-category-ko">속옷</a>
+        <span class="left-category-en">Underwear</span>
+    </div>
+    <div class="left-category">
+        <a href="#" class="left-category-ko">가방</a>
+        <span class="left-category-en">Bags</span>
+    </div>
+    <div class="left-category">
+        <a href="#" class="left-category-ko">양말/레그웨어</a>
+        <span class="left-category-en">Socks/Legwear</span>
+    </div>
+    <div class="left-category">
+        <a href="#" class="left-category-ko">시계</a>
+        <span class="left-category-en">Watch</span>
+    </div>
+    <div class="left-category">
+        <a href="#" class="left-category-ko">모자</a>
+        <span class="left-category-en">Headwear</span>
+    </div>
     <br/><br/>
     <p style="border-bottom: 1px solid lightgrey; padding: 15px"/>
     <div style="margin:15px;height: 150px;text-align: left">
