@@ -33,15 +33,15 @@
     #scroll-btn {
         font-family: 'Nanum Gothic', sans-serif;
         opacity: 0;
-        width: 65px;
-        height: 65px;
+        width: 70px;
+        height: 70px;
         color: dimgray;
         background-color: white;
         position: fixed;
         bottom: 13%;
         right: 10%;
-        border: 1px solid lightgrey;
-        font: bold 15px monospace;
+        border: 2px solid black;
+        font: bold 13px monospace;
         transition: opacity 2s, transform 2s;
     }
     #scroll-btn.show {
@@ -51,15 +51,15 @@
     #scroll-btn2 {
         font-family: 'Nanum Gothic', sans-serif;
         opacity: 0;
-        width: 65px;
-        height: 65px;
+        width: 70px;
+        height: 70px;
         color: dimgray;
         background-color: white;
         position: fixed;
         bottom: 5%;
         right: 10%;
-        border: 1px solid lightgrey;
-        font: bold 15px monospace;
+        border: 2px solid black;
+        font: bold 12px monospace;
         transition: opacity 2s, transform 2s;
     }
     #scroll-btn2.show {

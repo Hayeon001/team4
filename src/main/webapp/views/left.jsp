@@ -51,7 +51,7 @@
         <p style="font-size: 11px;color:darkgrey;">오전10시~오후5시 운영 / 금,토,일,휴일 휴무</p>
         <div style="border-top: 1px solid lightgrey; font-size: 12px;padding-top: 15px">
             <p>- 전화 전 <a href="#">자주 묻는 질문</a>을 확인하세요.</p>
-            <p>- <a href="#">1:1문의</a>를 통해서도 상담이 가능합니다.</p>
+            <p>- <a href="/ws">1:1문의</a>를 통해서도 상담이 가능합니다.</p>
             <p>- 상담문의는 각 상품 Q&A를 이용하세요.</p>
         </div>
     </div>
