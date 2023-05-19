@@ -27,7 +27,7 @@
     <div class="container">
         <h1>로그인</h1><br/>
 
-        <form id="login_form" class="form-horizontal text-left well">
+        <form id="login_form" class="form-horizontal text-left well" style="font-size: 18px">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="id">아이디:</label>
                 <div class="col-sm-8">
@@ -56,10 +56,10 @@
                 <div class="col-sm-offset-2 col-sm-10">
                     <div class="row">
                         <div class="col-sm-9">
-                            <span id="register_info" style="display: flex; align-items: flex-end;">모신사 방문이 처음이시라면?>></span>
+                            <span id="register_info" style="display: flex; align-items: flex-end;font-size: 13px;padding-right: 20px">모신사 방문이 처음이시라면?>></span>
                         </div>
                         <div class="col-sm-3">
-                            <button id="register_button" class="btn btn-default"><a href="/register">회원가입하기</a></button>
+                            <button id="register_button" class="btn btn-default"><a href="/register" style="text-decoration: none;color: grey">회원가입하기</a></button>
                         </div>
                     </div>
                 </div>
