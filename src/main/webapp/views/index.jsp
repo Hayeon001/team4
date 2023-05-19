@@ -39,7 +39,7 @@
         background-color: white;
         position: fixed;
         bottom: 13%;
-        right: 10%;
+        right: 3%;
         border: 2px solid black;
         font: bold 13px monospace;
         transition: opacity 2s, transform 2s;
@@ -57,9 +57,9 @@
         background-color: white;
         position: fixed;
         bottom: 5%;
-        right: 10%;
+        right: 3%;
         border: 2px solid black;
-        font: bold 12px monospace;
+        font: bold 10px monospace;
         transition: opacity 2s, transform 2s;
     }
     #scroll-btn2.show {
@@ -72,6 +72,72 @@
     }
 
     #scroll-btn2:hover {
+        color: white;
+        background-color: #222222;
+    }
+    #scroll-btn3 {
+        font-family: 'Nanum Gothic', sans-serif;
+        opacity: 0;
+        width: 70px;
+        height: 70px;
+        color: dimgray;
+        background-color: white;
+        position: fixed;
+        bottom: 21%;
+        right: 3%;
+        border: 2px solid black;
+        font: bold 12px monospace;
+        transition: opacity 2s, transform 2s;
+    }
+    #scroll-btn3.show {
+        opacity: 1;
+        transition: opacity 5s, transform 5s;
+    }
+    #scroll-btn3:hover {
+        color: white;
+        background-color: #222222;
+    }
+    #scroll-btn4 {
+        font-family: 'Nanum Gothic', sans-serif;
+        opacity: 0;
+        width: 70px;
+        height: 70px;
+        color: dimgray;
+        background-color: white;
+        position: fixed;
+        bottom: 29%;
+        right: 3%;
+        border: 2px solid black;
+        font: bold 12px monospace;
+        transition: opacity 2s, transform 2s;
+    }
+    #scroll-btn4.show {
+        opacity: 1;
+        transition: opacity 5s, transform 5s;
+    }
+    #scroll-btn4:hover {
+        color: white;
+        background-color: #222222;
+    }
+    #scroll-btn5 {
+        font-family: 'Nanum Gothic', sans-serif;
+        opacity: 0;
+        width: 70px;
+        height: 70px;
+        color: white;
+        background-color: #222222;
+        position: fixed;
+        bottom: 37%;
+        right: 3%;
+        border: 2px solid black;
+        font: bold 12px monospace;
+        transition: opacity 2s, transform 2s;
+    }
+    #scroll-btn5.show {
+        opacity: 1;
+        transition: opacity 5s, transform 5s;
+    }
+    #scroll-btn5:hover {
         color: white;
         background-color: #222222;
     }
@@ -181,6 +247,30 @@
 <script>
     let chatbtn = {
         init:function(){
+            const scrollBtn5 = document.createElement("button");
+            scrollBtn5.innerHTML = "ÀüÃ¼";
+            scrollBtn5.setAttribute("id", "scroll-btn5");
+            document.body.appendChild(scrollBtn5);
+            scrollBtn5.classList.add("show");
+            scrollBtn5.addEventListener("click", function(){
+                location.href='#';
+            });
+            const scrollBtn4 = document.createElement("button");
+            scrollBtn4.innerHTML = "¿©ÀÚ";
+            scrollBtn4.setAttribute("id", "scroll-btn4");
+            document.body.appendChild(scrollBtn4);
+            scrollBtn4.classList.add("show");
+            scrollBtn4.addEventListener("click", function(){
+                location.href='#';
+            });
+            const scrollBtn3 = document.createElement("button");
+            scrollBtn3.innerHTML = "³²ÀÚ";
+            scrollBtn3.setAttribute("id", "scroll-btn3");
+            document.body.appendChild(scrollBtn3);
+            scrollBtn3.classList.add("show");
+            scrollBtn3.addEventListener("click", function(){
+                location.href='#';
+            });
             const scrollBtn = document.createElement("button");
             scrollBtn.innerHTML = "Ãªº¿";
             scrollBtn.setAttribute("id", "scroll-btn");
@@ -202,5 +292,4 @@
     $(function(){
         chatbtn.init();
     });
-
 </script>

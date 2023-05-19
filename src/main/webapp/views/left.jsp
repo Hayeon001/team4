@@ -64,6 +64,14 @@
         <a href="#" class="left-category-ko">모자</a>
         <span class="left-category-en">Headwear</span>
     </div>
+    <div class="left-category">
+        <a href="#" class="left-category-ko">악세사리</a>
+        <span class="left-category-en">Accessory</span>
+    </div>
+    <div class="left-category">
+        <a href="#" class="left-category-ko">주얼리</a>
+        <span class="left-category-en">Jewelry</span>
+    </div>
     <br/><br/>
     <p style="border-bottom: 1px solid lightgrey; padding: 15px"/>
     <div style="margin:15px;height: 150px;text-align: left">
