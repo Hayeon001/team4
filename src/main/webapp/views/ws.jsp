@@ -34,7 +34,7 @@
     },
     connect:function(){
       var sid = this.id;
-      var socket = new SockJS('http://172.16.21.163:8090/ws');
+      var socket = new SockJS('http://172.16.21.61:8090/ws');
       this.stompClient = Stomp.over(socket);
       this.stompClient.connect({}, function(frame) {
         websocket.setConnected(true);
